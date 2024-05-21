@@ -1,3 +1,16 @@
+let currentExpression = '';
+
+function appendNumber(num) {
+    currentExpression += num;
+    document.getElementById('display').value = currentExpression;
+}
+
+function appendOperator(operator) {
+    if (currentExpression !== '' && !isNaN(currentExpression[currentExpression.length - 1])) {
+        currentExpression += operator;
+        document.getElementById('display').value = currentExpression;
+    }
+}
 function clearDisplay() {
     currentExpression = '';
     document.getElementById('display').value = '';
