@@ -17,6 +17,7 @@ function clearDisplay() {
 }
 
 function calculate() {
+    
     try {
         const result = eval(currentExpression);
         document.getElementById('display').value = result;
@@ -25,4 +26,3 @@ function calculate() {
         document.getElementById('display').value = 'Error';
     }
 }
-
